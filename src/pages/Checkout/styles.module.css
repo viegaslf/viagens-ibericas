@@ -1,0 +1,247 @@
+section {
+  width: 100%;
+}
+
+.widthContainer {
+  width: var(--main-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  padding: 120px 0 80px;
+
+  main {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .cancelContainer {
+      border-radius: 16px;
+      border: solid 1px var(--grey-light);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 16px;
+      color: var(--grey-medium);
+      font-style: italic;
+      width: max-content;
+
+      .buttonCancelBooking {
+        color: var(--red-normal);
+        background-color: transparent;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0.32px;
+        outline: none;
+        border: solid 1px var(--red-normal);
+        padding: 12px 16px;
+        border-radius: 8px;
+
+        &:hover {
+          cursor: pointer;
+          color: #fff;
+          background-color: var(--red-normal);
+        }
+      }
+    }
+
+    .hotelContainer {
+      border: solid 1px var(--grey-light);
+      border-radius: 16px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      width: 100%;
+
+      height: max-content;
+
+      .hotelWrapper {
+        padding: 16px 24px;
+
+        h5 {
+          color: var(--red-normal);
+          font-weight: 700;
+        }
+
+        .hotelLocation {
+          color: var(--grey-medium);
+          margin: 8px 0 16px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 21px;
+          color: var(--grey-dark);
+        }
+      }
+
+      .roomWrapper {
+        border-left: solid 1px var(--grey-light);
+
+        img {
+          width: 100%;
+          border-radius: 0 12px 0 0;
+          height: 136px;
+        }
+
+        p {
+          font-weight: 700;
+          padding: 8px 12px;
+        }
+      }
+    }
+
+    .paymentTypeContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 24px;
+
+      .input {
+        display: none;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+        width: 100%;
+        padding: 24px 32px;
+        align-items: center;
+        gap: 24px;
+        border: solid 1px var(--grey-light);
+
+        svg {
+          font-size: 32px;
+          color: var(--grey-medium);
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .paymentContainer input:checked ~ .content {
+      border: solid 2px var(--yellow-normal);
+
+      svg {
+        color: var(--yellow-normal);
+      }
+
+      h6 {
+        font-weight: 700;
+      }
+    }
+  }
+
+  aside {
+    grid-column-start: 9;
+    grid-column-end: 13;
+    border: solid 1px var(--grey-light);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 32px;
+
+    h5 {
+      color: red;
+      margin-bottom: 16px;
+    }
+
+    .grey {
+      color: var(--grey-light);
+      font-weight: 400;
+    }
+
+    .infoContainer {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 32px;
+    }
+
+    .infoWrapper {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .verticalLine {
+      width: 1px;
+      height: 100%;
+      background-color: var(--grey-light);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--grey-medium);
+      font-weight: 700;
+      line-height: 21px;
+    }
+
+    h6 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 21px;
+    }
+
+    span {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      margin-top: 8px;
+    }
+
+    .containerRow {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .containerRowPayment {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 16px;
+
+      h5 {
+        font-weight: 900;
+        color: var(--grey-darker);
+
+        &:first-child {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .buttonPayment {
+    color: var(--red-darker);
+    background-color: var(--yellow-normal);
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.32px;
+    outline: none;
+    border: 0;
+    padding: 16px 24px;
+    border-radius: 8px;
+    width: 100%;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--yellow-normal);
+      background-color: var(--red-darker);
+    }
+  }
+}

@@ -1,0 +1,189 @@
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--red-normal);
+
+  main {
+    width: var(--main-width);
+    margin: 0 auto;
+
+    .gridContainer {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 24px;
+      margin: 64px 0 48px;
+
+      .logoCol {
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+        img {
+          height: 32px;
+          margin-bottom: 16px;
+        }
+      }
+
+      .linksCol {
+        grid-column-start: 5;
+        grid-column-end: 7;
+      }
+
+      .companyCol {
+        grid-column-start: 7;
+        grid-column-end: 9;
+      }
+
+      .newsletterCol {
+        grid-column-start: 10;
+        grid-column-end: 13;
+
+        input {
+          padding: 8px 12px;
+          font-size: 16px;
+          line-height: 24px;
+          border-radius: 8px;
+          border: solid 1px var(--grey-white);
+          width: 100%;
+          background-color: transparent;
+
+          &:valid {
+            border: solid 1px var(--yellow-normal);
+          }
+
+          &:focus {
+            border: solid 2px var(--yellow-normal);
+            outline: none;
+          }
+        }
+
+        button {
+          padding: 11px 20px 12px;
+          border-radius: 8px;
+          width: 100%;
+          margin-top: 16px;
+          font-size: 14px;
+          line-height: 16px;
+          outline: none;
+          border: 0;
+          color: var(--red-darker);
+          border: solid 1px var(--yellow-normal);
+          background-color: var(--yellow-normal);
+
+          &:hover {
+            cursor: pointer;
+            color: var(--yellow-normal);
+            border: solid 1px var(--red-darker);
+            background-color: var(--red-darker);
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      p,
+      a,
+      h5,
+      input,
+      input::placeholder {
+        color: var(--grey-white);
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      li {
+        margin-bottom: 8px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      h5 {
+        margin-bottom: 16px;
+      }
+
+      a:hover {
+        color: var(--grey-darker);
+      }
+    }
+
+    .copyrights {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      border-top: solid 1px var(--red-dark);
+      padding: 24px 0 32px;
+
+      p {
+        color: var(--red-medium);
+      }
+    }
+  }
+}
+
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  border: 0;
+  outline: none;
+
+  h4 {
+    color: var(--red-normal);
+  }
+
+  h6 {
+    margin: 16px 0 24px;
+  }
+
+  .mailInserted {
+    font-weight: 700;
+  }
+
+  .newsletterCloseButton {
+    border-radius: 8px;
+    float: right;
+    padding: 11px 20px 12px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    outline: none;
+    color: var(--red-darker);
+    border: solid 1px var(--yellow-normal);
+    background-color: var(--yellow-normal);
+
+    &:hover {
+      cursor: pointer;
+      color: var(--yellow-normal);
+      border: solid 1px var(--red-darker);
+      background-color: var(--red-darker);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.75;
+}

@@ -1,0 +1,19 @@
+.loadingBackground {
+  background-color: var(--yellow-normal);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+h4 {
+  color: #fff;
+  font-weight: 400;
+  text-align: left;
+}

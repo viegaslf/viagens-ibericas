@@ -1,0 +1,358 @@
+.section {
+  width: 100%;
+  min-height: 70vh;
+  padding: 144px 0;
+
+  main {
+    width: var(--main-width);
+    margin: 0 auto;
+
+    .infoContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .infoWrapper {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 40px;
+      padding: 40px;
+      border: solid 1px var(--grey-light);
+      border-radius: 0 0 16px 16px;
+    }
+
+    .bookingsWrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 40px;
+      border: solid 1px var(--grey-light);
+      border-radius: 0 0 16px 16px;
+    }
+
+    .bookingNumber {
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 1px;
+      font-weight: 700;
+      padding: 8px 12px;
+      text-transform: uppercase;
+      background-color: var(--red-normal);
+      color: #fff;
+      border-radius: 12px 12px 0 0;
+      width: max-content;
+    }
+
+    .bookingRow {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 4fr 1fr;
+      border-radius: 0 16px 16px 16px;
+      margin-bottom: 32px;
+      gap: 24px;
+      align-items: flex-end;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .bookingWrapper {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 24px;
+      padding: 24px;
+      border: solid 1px var(--grey-light);
+      border-radius: 0 16px 16px 16px;
+    }
+
+    .editMail {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+    }
+
+    .buttonEditEmail {
+      color: var(--grey-medium);
+      font-size: 14px;
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: center;
+
+      &:hover {
+        font-weight: 700;
+        color: var(--grey-darker);
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      svg {
+        font-size: 16px;
+      }
+    }
+
+    h6 {
+      font-weight: 700;
+      color: var(--yellow-normal);
+    }
+  }
+}
+
+.dialogOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.75;
+  z-index: 5;
+}
+
+.dialogContent {
+  width: 30vw;
+  height: max-content;
+  background-color: #fff;
+  border-radius: 16px;
+  z-index: 6;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+
+  h5 {
+    color: var(--red-normal);
+    margin-bottom: 24px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    label {
+      font-weight: 700;
+    }
+
+    input {
+      color: var(--grey-darker);
+      font-size: 16px;
+      line-height: 24px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: solid 1px var(--grey-light);
+      width: 100%;
+
+      &::placeholder {
+        color: var(--grey-light);
+      }
+
+      &:focus {
+        border: solid 2px var(--yellow-normal);
+        outline: none;
+      }
+    }
+  }
+
+  .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: flex-end;
+    margin-top: 16px;
+
+    .emailCloseButton {
+      color: var(--red-darker);
+      background-color: transparent;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 0.32px;
+      outline: none;
+      border: solid 1px var(--red-darker);
+      padding: 16px 24px;
+      border-radius: 8px;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--yellow-normal);
+        background-color: var(--red-darker);
+      }
+    }
+
+    .submitButton {
+      color: var(--red-darker);
+      background-color: var(--yellow-normal);
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 0.32px;
+      outline: none;
+      border: 0;
+      padding: 16px 24px;
+      border-radius: 8px;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--yellow-normal);
+        background-color: var(--red-darker);
+      }
+    }
+  }
+}
+
+.linkToDestinos {
+  color: var(--yellow-normal);
+  font-weight: 700;
+  text-decoration: underline;
+  margin-top: 16px;
+}
+
+.buttonMakeReview {
+  color: var(--red-darker);
+  background-color: var(--yellow-normal);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  height: 100%;
+  outline: none;
+  border: 0;
+  padding: 16px 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  svg {
+    font-size: 24px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: var(--yellow-normal);
+    background-color: var(--red-darker);
+  }
+}
+
+.daysUntilCheckIn {
+  color: var(--grey-darker);
+  background-color: rgb(166, 185, 166);
+  text-align: center;
+  height: 100%;
+  outline: none;
+  border: 0;
+  padding: 16px 32px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  svg {
+    font-size: 24px;
+  }
+}
+
+.ReviewTitleDialog {
+  color: var(--grey-darker) !important;
+  font-weight: 700;
+}
+
+.ReviewStars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
+  padding: 12px 16px;
+  resize: none;
+  margin-bottom: 16px;
+  outline: none;
+  font-size: 16px;
+}
+
+.closeReviewButton {
+  color: var(--red-darker);
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  outline: none;
+  border: solid 1px var(--red-darker);
+  padding: 16px 24px;
+  border-radius: 8px;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--yellow-normal);
+    background-color: var(--red-darker);
+  }
+}
+
+.submitReviewButton {
+  color: var(--red-darker);
+  background-color: var(--yellow-normal);
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  outline: none;
+  border: 0;
+  padding: 16px 24px;
+  border-radius: 8px;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--yellow-normal);
+    background-color: var(--red-darker);
+  }
+}
+
+.colorContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+
+  input[type="color"] {
+    width: 32px;
+    height: 32px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+
+.dialogReviewOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.4;
+  z-index: 5;
+}
